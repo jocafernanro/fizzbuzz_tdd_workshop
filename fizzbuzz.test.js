@@ -10,7 +10,7 @@ describe("fizzbuzz", () => {
   test("should print fizz if the given value is 3", () => {
     const expected = "fizz";
     const result = fizzbuzz(3);
-    expect(expected).toBe(result)
+    expect(expected).toBe(result);
   });
 
   test("should print fizz if the given value is multiple of 3", () => {
@@ -34,6 +34,12 @@ describe("fizzbuzz", () => {
   test("should print fizzbuzz if the given value is multiple of 3 and 5", () => {
     const expected = "fizzbuzz";
     const result = fizzbuzz(15);
+    expect(expected).toBe(result);
+  });
+
+  test("should print 0 if the given value is 0", () => {
+    const expected = 0;
+    const result = fizzbuzz(0);
     expect(expected).toBe(result);
   });
 });

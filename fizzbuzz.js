@@ -1,8 +1,10 @@
 function fizzbuzz(num) {
+  const isDivisible = ({num, by} = {}) => num % by === 0
+
   if (num === 0) return 0;
-  if (num % 3 === 0 && num % 5 === 0) return "fizzbuzz";
-  if (num % 3 === 0) return "fizz";
-  if (num % 5 === 0) return "buzz";
+  if (isDivisible({num, by: 3}) && isDivisible({num, by: 5})) return "fizzbuzz";
+  if (isDivisible({num, by: 3})) return "fizz";
+  if (isDivisible({num, by: 5})) return "buzz";
   return num;
 }
 

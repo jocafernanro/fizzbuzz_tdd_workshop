@@ -24,4 +24,10 @@ describe("fizzbuzz", () => {
     const result = fizzbuzz(5);
     expect(expected).toBe(result);
   });
+
+  test("should print buzz if the given value is multiple of 5", () => {
+    const expected = "buzz";
+    const result = fizzbuzz(10);
+    expect(expected).toBe(result);
+  });
 });
